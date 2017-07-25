@@ -1,0 +1,35 @@
+{% from "macros.html" import nav_link with context %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Template Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div#main {
+                max-width: 500em;
+                padding: 20em;
+            }
+
+            nav .title {
+                font-weight: bold;
+            }
+
+            a.active {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <section id=main">
+        {% block content %}
+            <h1>
+                Hello {{first}} {{last}}!
+                </h1>
+                <p>
+                    Your Jedi name is {{jedi}}
+                    </p>
+    {% endblock %}
+        </section>
+    </body>
+</html>
